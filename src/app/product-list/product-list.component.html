@@ -1,0 +1,31 @@
+
+<h2>Products</h2>
+
+<div *ngFor="let product of products; index as productId" >
+
+<h3>
+    <a [routerLink]="['/products', productId]">
+        {{ product.name }}
+    </a>
+</h3>
+<p *ngIf="product.price">
+    
+    Price: {{ product.price}}
+</p>
+
+<p>
+    {{ product.animal }}
+</p>
+
+<!-- <p *ngIf="product.img">
+    
+    Image: 
+</p>
+{{ product.img }} 
+
+<img src="{{product.img}}">
+
+</img> -->
+
+
+</div>
